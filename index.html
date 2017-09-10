@@ -1,0 +1,257 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>混成競技計算ツール</title>
+<meta name="description" itemprop="description" content="混成競技の計算ツール" >
+<meta name="keywords" itemprop="keywords" content="陸上競技,混成競技,十種競技,七種競技,八種競技,四種競技" />
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="css/jquerymobile.css" />
+<script src="js/jquery.js"></script>
+<script src="js/jquerymobile.js"></script>
+</head>
+<body>
+
+<!--TOP Page-->
+<div data-role="page" id="home">
+  <div data-role="header" data-position="fixed"  data-add-back-btn="true">
+    <h1>混成得点計算</h1>
+    </div>
+  <div data-role="content">
+    
+      <h2>計算したい種目をタップして下さい。</h2>
+      <ul data-role="listview">
+        <li><a href="#deca-cal">十種競技得点計算</a></li>
+        <li><a href="#hepta-cal">七種競技得点計算</a></li>
+        <li><a href="#octa-cal">八種競技得点計算</a></li>
+        <li><a href="#mtetra-cal">男子四種競技得点計算</a></li>
+        <li><a href="#ftetra-cal">女子四種競技得点計算</a></li>
+      </ul>
+   
+  </div>
+  <div data-role="footer"　data-position="fixed" class="ui-footer-fixed">
+  <h4>(C)cityJumperWEB.com</h4>
+  </div>
+</div>
+
+<!--十種競技計算ツール-->
+<div data-role="page" id="deca-cal">
+  <div data-role="header" data-position="fixed" data-add-back-btn="true">
+    <h2>混成得点計算</h2>
+  </div>
+  <div data-role="content">
+    <h1>十種競技得点計算</h1>
+    <div data-role="collapsible" data-mini="true">
+      <h2>その他の混成競技</h2>
+      <ul data-role="listview">
+        <li><a href="#hepta-cal" class="ui-btn ui-mini">七種競技得点計算</a></li>
+        <li><a href="#octa-cal" class="ui-btn ui-mini">八種競技得点計算</a></li>
+        <li><a href="#mtetra-cal" class="ui-btn ui-mini">男子四種競技得点計算</a></li>
+        <li><a href="#ftetra-cal" class="ui-btn ui-mini">女子四種競技得点計算</a></li>
+      </ul>
+    </div>
+    <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext ">HOME</a>
+    
+    <body>
+    <div id="maledeca">
+      1日目<br>
+      <input placeholder="100m 記入例:1124" type="text" data-event="track" data-name="100m : ">
+      <input placeholder="走幅跳　記入例:715" type="text" data-event="jump" data-name="LJ : ">
+      <input placeholder="砲丸投 記入例:1519" type="text" data-event="throw" data-name="SP : ">
+      <input placeholder="走高跳 記入例:203" type="text" data-event="jump" data-name="HJ : ">
+      <input placeholder="400m 記入例:4966" type="text" data-event="track" data-name="400m : ">
+      2日目<br>
+      <input placeholder="110mH 記入例:1490" type="text" data-event="track" data-name="110mH : ">
+      <input placeholder="円盤投 記入例:5017" type="text" data-event="throw" data-name="DT : ">
+      <input placeholder="棒高跳 記入例:480" type="text" data-event="jump" data-name="PV : ">
+      <input placeholder="槍投 記入例:6911" type="text" data-event="throw" data-name="JT : ">
+      <input placeholder="1500m 記入例:43262" type="text" data-event="track" data-name="1500m : ">
+    </div>
+    <input type="button" value="合計" onclick="decaCal('maledeca');">
+    </p>
+    <div class="ui-field-contain">
+      <p>種目 ： 得点 - 累計</p>
+      <textarea rows="13" cols="20" value="" id="maledecaTotal">
+&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;
+</textarea>
+<br><br><br>
+    </div>
+    <div data-role="footer"　data-position="fixed" class="ui-footer-fixed">
+<h4>(C)cityJumperWEB.com</h4>
+    </div>
+  </div>
+</div>
+
+<!--八種競技計算ツール-->
+<div data-role="page" id="octa-cal">
+  <div data-role="header" data-position="fixed" data-add-back-btn="true">
+    <h2>混成得点計算</h2>
+  </div>
+  <div data-role="content">
+    <h1>八種競技得点計算</h1>
+    <div data-role="collapsible" data-mini="true">
+      <h2>その他の混成競技</h2>
+      <ul data-role="listview">
+        <li><a href="#deca-cal" class="ui-btn ui-mini">十種競技得点計算</a></li>
+        <li><a href="#hepta-cal" class="ui-btn ui-mini">七種競技得点計算</a></li>
+        <li><a href="#mtetra-cal" class="ui-btn ui-mini">男子四種競技得点計算</a></li>
+        <li><a href="#ftetra-cal" class="ui-btn ui-mini">女子四種競技得点計算</a></li>
+      </ul>
+    </div>
+    <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext ">HOME</a>
+    
+    <body>
+    <div id="maleocta">
+      1日目<br>
+      <input placeholder="100m 記入例:1145" type="text" data-event="track" data-name="100m : ">
+      <input placeholder="走幅跳　記入例:705" type="text" data-event="jump" data-name="LJ : ">
+      <input placeholder="砲丸投 記入例:1015" type="text" data-event="throw" data-name="SP : ">
+      <input placeholder="400m 記入例:5120" type="text" data-event="track" data-name="400m : ">
+      2日目<br>
+      <input placeholder="110mH 記入例:1606" type="text" data-event="track" data-name="110mH : ">
+      <input placeholder="槍投 記入例:4020" type="text"  data-event="throw" data-name="JT : ">
+      <input placeholder="走高跳 記入例:196" type="text" data-event="jump" data-name="HJ : ">
+      <input placeholder="1500m 記入例:44598" type="text" data-event="track" data-name="1500m : ">
+    </div>
+    <input type="button" value="合計" onclick="decaCal('maleocta');">
+    </p>
+    <div class="ui-field-contain">
+      <p>種目 ： 得点 - 累計</p>
+      <textarea rows="13" cols="20" value="" id="maleoctaTotal">
+&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;
+</textarea>
+<br><br><br>
+    </div>
+    <div data-role="footer"　data-position="fixed" class="ui-footer-fixed">
+   <h4>(C)cityJumperWEB.com</h4>
+    </div>
+  </div>
+</div>
+
+<!--男子四種競技計算ツール-->
+<div data-role="page" id="mtetra-cal">
+  <div data-role="header" data-position="fixed" data-add-back-btn="true">
+    <h2>混成得点計算</h2>
+  </div>
+  <div data-role="content">
+    <h1>男子四種得点計算</h1>
+    <div data-role="collapsible" data-mini="true">
+      <h2>その他の混成競技</h2>
+      <ul data-role="listview">
+        <li><a href="#deca-cal" class="ui-btn ui-mini">十種競技得点計算</a></li>
+        <li><a href="#hepta-cal" class="ui-btn ui-mini">七種競技得点計算</a></li>
+        <li><a href="#octa-cal" class="ui-btn ui-mini">八種競技得点計算</a></li>
+        <li><a href="#ftetra-cal" class="ui-btn ui-mini">女子四種競技得点計算</a></li>
+      </ul>
+    </div>
+    <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext ">HOME</a>
+    
+    <body>
+    <div id="maletetra">
+      <input placeholder="110mH 記入例:1506" type="text" data-event="track" data-name="110mH : ">
+      <input placeholder="砲丸投 記入例:0915" type="text" data-event="throw" data-name="SP : ">
+      <input placeholder="走高跳 記入例:196" type="text"  data-event="jump" data-name="HJ : ">
+      <input placeholder="400m 記入例:5220" type="text" data-event="track" data-name="400m : ">
+    </div>
+    <input type="button" value="合計" onclick="decaCal('maletetra');">
+    </p>
+    <div class="ui-field-contain">
+      <p>種目 ： 得点 - 累計</p>
+      <textarea rows="13" cols="20" value="" id="maletetraTotal">
+&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;
+</textarea>
+<br><br><br>
+    </div>
+    <div data-role="footer"　data-position="fixed" class="ui-footer-fixed">
+     <h4>(C)cityJumperWEB.com</h4>
+    </div>
+  </div>
+</div>
+
+<!--七種競技計算ツール-->
+<div data-role="page" id="hepta-cal">
+  <div data-role="header" data-position="fixed" data-add-back-btn="true">
+    <h2>混成得点計算</h2>
+  </div>
+  <div data-role="content">
+    <h1>七種得点計算</h1>
+    <div data-role="collapsible" data-mini="true">
+      <h2>その他の混成競技</h2>
+      <ul data-role="listview">
+        <li><a href="#deca-cal" class="ui-btn ui-mini">十種競技得点計算</a></li>
+        <li><a href="#octa-cal" class="ui-btn ui-mini">八種競技得点計算</a></li>
+        <li><a href="#mtetra-cal" class="ui-btn ui-mini">男子四種競技得点計算</a></li>
+        <li><a href="#ftetra-cal" class="ui-btn ui-mini">女子四種競技得点計算</a></li>
+      </ul>
+    </div>
+    <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext ">HOME</a>
+    
+    <body>
+    <div id="fmhepta">
+      1日目<br>
+      <input placeholder="100mH 記入例:1390" type="text" data-event="track" data-name="100mH : ">
+      <input placeholder="走高跳 記入例:157" type="text" data-event="jump" data-name="HJ : ">
+      <input placeholder="砲丸投 記入例:1158" type="text" data-event="throw" data-name="SP : ">
+      <input placeholder="200m 記入例:2447" type="text" data-event="track" data-name="200m : ">
+      2日目<br>
+      <input placeholder="走幅跳 記入例:607" type="text" data-event="jump" data-name="LJ : ">
+      <input placeholder="槍投 記入例:4153" type="text" data-event="throw" data-name="JT : ">
+      <input placeholder="800m 記入例:22687" type="text" data-event="track" data-name="800m : ">
+    </div>
+    <input type="button" value="合計" onclick="decaCal('fmhepta');">
+    </p>
+    <div class="ui-field-contain">
+      <p>種目 ： 得点 - 累計</p>
+      <textarea rows="13" cols="20" value="" id="fmheptaTotal">
+&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;
+</textarea>
+<br><br><br>
+    </div>
+    <div data-role="footer"　data-position="fixed" class="ui-footer-fixed">
+    <h4>(C)cityJumperWEB.com</h4>
+    </div>
+  </div>
+</div>
+
+<!--女子四種競技計算ツール-->
+<div data-role="page" id="ftetra-cal">
+  <div data-role="header" data-position="fixed" data-add-back-btn="true">
+    <h2>混成得点計算</h2>
+  </div>
+  <div data-role="content">
+    <h1>女子四種得点計算</h1>
+    <div data-role="collapsible" data-mini="true">
+      <h2>その他の混成競技</h2>
+      <ul data-role="listview">
+        <li><a href="#deca-cal" class="ui-btn ui-mini">十種競技得点計算</a></li>
+        <li><a href="#hepta-cal" class="ui-btn ui-mini">七種競技得点計算</a></li>
+        <li><a href="#octa-cal" class="ui-btn ui-mini">八種競技得点計算</a></li>
+        <li><a href="#mtetra-cal" class="ui-btn ui-mini">男子四種競技得点計算</a></li>
+      </ul>
+    </div>
+    <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home ui-btn-icon-notext ">HOME</a>
+    
+    <body>
+    <div id="fmtetra">
+      <input placeholder="100mH 記入例:1506" type="text" data-event="track" data-name="100mH : ">
+      <input placeholder="砲丸投 記入例:0915" type="text" data-event="throw" data-name="SP : ">
+      <input placeholder="走高跳 記入例:156" type="text" data-event="jump" data-name="HJ : ">
+      <input placeholder="200m 記入例:2620" type="text" data-event="track" data-name="200m : ">
+    </div>
+    <input type="button" value="合計" onclick="decaCal('fmtetra');">
+    </p>
+    <div class="ui-field-contain">
+      <p>種目 ： 得点 - 累計</p>
+      <textarea rows="13" cols="20" value="" id="fmtetraTotal">
+&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;&#13;
+</textarea>
+<br><br><br>
+    </div>
+    <div data-role="footer"　data-position="fixed" class="ui-footer-fixed">
+    <h4>(C)cityJumperWEB.com</h4>
+    </div>
+  </div>
+</div>
+</body>
+<script src="sportstools.js"></script>
+</html>
